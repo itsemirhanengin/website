@@ -1,0 +1,7 @@
+.section-title {
+	text-align: center;
+	font-size: 40px;
+	@include rubik-medium;
+	color: $white;
+	margin-bottom: 60px;
+}

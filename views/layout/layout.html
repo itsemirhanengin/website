@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr" class="ltr">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %} - Emirhan Engin's World!</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+	<meta name="keywords" content="emirhanengin,emirhan,engin,frontend,developer,frontend-developer">
+	<meta name="description" content="Hi! I'm Emirhan Engin. I'm a Front-End Developer.">
+
+	<meta property="og:locale" content="tr_TR" />
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="" />
+	<meta property="og:site_name" content="">
+
+	<link rel="stylesheet" href="dist/css/vendors.css">
+	<link rel="stylesheet" href="dist/css/main.min.css">
+</head>
+<body class="{%block bodyClass %}{% endblock %}">
+	<main>
+		{% include "../partials/header.html" %}
+
+		{% block content %}{% endblock %}
+
+		{% include "../partials/footer.html" %}
+	</main>
+
+	<script src="dist/js/lib.min.js"></script>
+	<script src="dist/js/core.min.js"></script>
+</body>
+</html>

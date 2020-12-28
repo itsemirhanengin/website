@@ -1,0 +1,29 @@
+.fancybox-is-open .fancybox-bg {
+	opacity: 0.5;
+	background-color: #000000;
+}
+
+.fancybox-slide {
+	padding: 10px;
+}
+
+.fancybox-slide--iframe .fancybox-content  {
+	width: 440px;
+	height: auto;
+	max-width: 100%;
+	border-radius: 10px;
+	overflow: auto;
+	margin: 0;
+
+	.fancybox-button.fancybox-close-small {
+		right: 0;
+		top: 0;
+		opacity: 1;
+		color: #aab5b
+		d;
+		&:hover {
+			opacity: 1;
+			color: #aab5bd;
+		}
+	}
+}

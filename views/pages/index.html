@@ -1,0 +1,67 @@
+{% extends "./layout/layout.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="home-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="home-hero-small-title">Hi! I'm Emirhan Engin</div>
+        <div class="home-hero-title">I work at <a href="https://basework.studio" target="_blank">Basework Studio</a> and I'm a Front-End Developer</div>
+        <div class="home-hero-technologies">
+          <div class="home-hero-technologies-item">
+            <a href="https://developer.mozilla.org/tr/docs/Web/JavaScript" target="_blank">
+              <i>
+                <img src="dist/img/javascript.svg" alt="javascript">
+              </i>
+            </a>
+          </div>
+          <div class="home-hero-technologies-item">
+            <a href="https://graphql.org" target="_blank">
+              <i>
+                <img src="dist/img/graphql.svg" alt="graphql">
+              </i>
+            </a>
+          </div>
+          <div class="home-hero-technologies-item">
+            <a href="https://reactjs.org/" target="_blank">
+              <i>
+                <img src="dist/img/react.svg" alt="react">
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 ml-auto">
+        <div class="home-hero-wallpaper" style="background-image: url(dist/img/wallpaper.png)"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blogs">
+  <div class="container">
+    <div class="row">
+      <div class="home-section-title">
+        <h4>Blogs</h4>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="blog-item">
+            <a href="blog-hello-world.html">
+              <div class="blog-item-wallpaper">
+                <img src="dist/img/blog-detail.jpg" alt="">
+              </div>
+              <div class="blog-item-title">Hello World!</div>
+              <div class="blog-item-description">As every developer/engineer knows, everything starts with “Hello World”. There is have many cha...</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="blogs-footer">
+        <a href="blogs.html" class="btn">SEE ALL</a>
+      </div> -->
+    </div>
+  </div>
+</section>
+{% endblock %}

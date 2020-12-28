@@ -1,0 +1,27 @@
+{% extends "./layout/layout.html" %}
+{% block title %}Blogs{% endblock %}
+
+{% block content %}
+<section class="blogs">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h4>BLOGS</h4>
+      </div>
+      <div class="row">
+        {% for i in range(0, 12) %}
+        <div class="col-lg-4">
+          <div class="blog-item">
+            <a href="blog-detail.html">
+              <div class="blog-item-wallpaper"></div>
+              <div class="blog-item-title">Hello World!</div>
+              <div class="blog-item-description">As every developer/engineer knows, everything starts with “Hello World”. There is have many cha...</div>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
