@@ -16,16 +16,18 @@
 			margin-bottom: 12px;
 		}
 		&-title {
-			font-size: 28px;
-			line-height: 42px;
-			@include rubik-light;
-			color: $white;
-			a {
+			h3 {
+				font-size: 28px;
+				line-height: 42px;
+				@include rubik-light;
 				color: $white;
-				@include rubik-regular;
-				text-decoration: none;
-				&:hover {
+				a {
+					color: $white;
+					@include rubik-regular;
 					text-decoration: none;
+					&:hover {
+						text-decoration: none;
+					}
 				}
 			}
 		}

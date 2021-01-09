@@ -11,8 +11,8 @@ function Blogs({ title, items }) {
 					
 					{items ? (
 						<div className="row">
-							{items.map(item => (
-								<div className="col-lg-4">
+							{items.map((item, i) => (
+								<div className="col-lg-4" key={i}>
 									<div className="blog-item">
 										<Link href={`/blogs/${item.slug}`}>
 											<a>
