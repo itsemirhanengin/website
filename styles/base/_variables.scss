@@ -1,0 +1,12 @@
+// Bootstrap Override
+$grid-gutter-width: 30px !default;
+$screen-xs: 480px !default;
+$screen-sm: 768px !default;
+$screen-md: 992px !default;
+$screen-lg: 1140px !default;
+$screen-lg-min: 1140px !default;
+/*$container-sm: calc(100% - 100px) !default;
+$container-xs: calc(100% - 60px) !default;*/
+
+@import '../variables/fonts';
+@import '../variables/colors';

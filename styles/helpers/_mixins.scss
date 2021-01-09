@@ -1,0 +1,149 @@
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin img-fluid {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.img-fluid {
+	@include img-fluid;
+}
+
+@mixin fontface($name,$filename) {
+	@font-face {
+		font-family: '#{$name}';
+		src: url('../fonts/#{$filename}.eot');
+		src: url('../fonts/#{$filename}.eot?#iefix') format('embedded-opentype'), url('../fonts/#{$filename}.woff2') format('woff2'), url('../fonts/#{$filename}.woff') format('woff'), url('../fonts/#{$filename}.ttf') format('truetype'), url('../fonts/#{$filename}.svg##{$name}') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+@mixin appearance($value) {
+	-moz-appearance: $value;
+	-webkit-appearance: $value;
+	appearance: $value;
+}
+
+@mixin border-radius($radius: 5px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin opacity($opacity: 0.5) {
+	filter: alpha(opacity=($opacity * 100));
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + ($opacity * 100) + ")";
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	opacity: $opacity;
+}
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+	text-shadow: $x $y $blur $color;
+}
+
+@mixin background-2x($path, $ext: "png", $w: auto, $h: auto, $pos: left top, $repeat: no-repeat) {
+	$at1x_path: "#{$path}.#{$ext}";
+	$at2x_path: "#{$path}@2x.#{$ext}";
+
+	background-image: url("#{$at1x_path}");
+	background-size: $w $h;
+	background-position: $pos;
+	background-repeat: $repeat;
+
+	@media all and (-webkit-min-device-pixel-ratio : 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+		background-image: url("#{$at2x_path}");
+	}
+}
+
+@mixin not-last-child {
+	&:not(:last-child) {
+		@content;
+	}
+}
+
+@mixin typography(
+	$h1: 32px,
+	$h2: 28px,
+	$h3: 24px,
+	$h4: 22px,
+	$h5: 20px,
+	$h6: 18px,
+	$text-large: 16px,
+	$text-medium: 14px,
+	$text-small: 12px
+) {
+	h1 {
+		font-size: $h1;
+	}
+	h2 {
+		font-size: $h2;
+	}
+	h3 {
+		font-size: $h3;
+	}
+	h4 {
+		font-size: $h4;
+	}
+	h5 {
+		font-size: $h5;
+	}
+	h6 {
+		font-size: $h6;
+	}
+	
+	.text-large {
+		font-size: $text-large;
+	}
+	.text-medium {
+		font-size: $text-medium;
+	}
+	.text-small {
+		font-size: $text-small;
+	}
+}
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-horizontal-center($direction: 'row') {
+	display: flex;
+
+	@if ($direction == 'row') {
+		justify-content: center;
+	}
+	@if ($direction == 'column') {
+		align-items: center;
+	}
+}
+
+@mixin flex-vertical-center($direction: 'row') {
+	display: flex;
+
+	@if ($direction == 'row') {
+		align-items: center;
+	}
+	@if ($direction == 'column') {
+		justify-content: center;
+	}
+}
